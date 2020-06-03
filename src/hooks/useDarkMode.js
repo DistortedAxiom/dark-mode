@@ -4,7 +4,7 @@ import { useLocalStorage } from "./useLocalStorage";
 export const useDarkMode = (key, initialValue) => {
     const [value, setValue] = useLocalStorage(key, initialValue);
 
-    const handleChanges = updatedValue => {
+    const handleChange = updatedValue => {
         setValue(updatedValue);
     };
 
@@ -16,5 +16,5 @@ export const useDarkMode = (key, initialValue) => {
         }
     }, [value]);
 
-    return [value, setValue, handleChanges];
+    return [value, setValue, handleChange];
 };
